@@ -13,10 +13,12 @@ db.sequelize.sync({}).then(() => {
 require('./app/route/customer.route.js')(app);
  
 // Create a Server
-var server = app.listen(8081, function () {
+//var server = app.listen(8081, function () {
  
-  var host = 'api-facturationx.heroku.com/'
-  var port = server.address().port
+  //var host = 'api-facturationx.heroku.com/'
+  //var port = server.address().port
  
-  console.log("App listening at http://%s:%s", host, port)
-})
+  //console.log("App listening at http://%s:%s", host, port)
+//})
+
+server= app.listen(process.env.PORT || 5000)
